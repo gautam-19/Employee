@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C/Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('/static/14.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 733px;
+            margin-left: 300px;
+            margin-top: 20px;
+            background-color: transparent;
+        }
+
+        .accordion-item {
+            padding: 1%;
+        }
+        .h1, h1 {
+            font-size: 4.5rem;
+        }
+
+        .accordion-button {
+            background-color: transparent;
+            font-size: large;
+            font-weight: bold;
+
+        }
+
+        .accordion {
+            --bs-accordion-border-color: transparent;
+            --bs-accordion-bg: transparent;
+        }
+
+        .accordion-body {
+            font-weight: bold;
+            font-size: 120%;
+        }
+
+        .accordion-button:not(.collapsed) {
+
+            background-color: transparent;
+
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info1">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <h2>DRY Enterprises</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/about">About Us</a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">About Us</h1>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item ">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h3>Company Overview</h3>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>DRY Enterprises is a leading provider of innovative solutions and services, dedicated to
+                            delivering excellence and value to our clients. Our mission is to drive progress and set new
+                            standards in our industry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTow" aria-expanded="false" aria-controls="collapseTow">
+                        <h3>Our Mission and Values</h3>
+                    </button>
+                </h2>
+                <div id="collapseTow" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>At DRY Enterprises, our mission is to innovate and excel in all our endeavors, providing
+                            top-tier solutions that meet and exceed our clients' expectations.</p>
+                        <ul>
+                            <li><strong>Innovation:</strong> We strive to stay at the forefront of technological
+                                advancements.</li>
+                            <li><strong>Integrity:</strong> We conduct our business with the highest ethical standards.
+                            </li>
+                            <li><strong>Customer Focus:</strong> Our clients are at the heart of everything we do.</li>
+                            <li><strong>Excellence:</strong> We are committed to delivering the highest quality in all
+                                our services.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h3>Our History</h3>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Founded in 2018, DRY Enterprises has grown from a small startup to a renowned leader in the
+                            industry. Over the years, we have achieved numerous milestones and continue to expand our
+                            reach and impact.</p>
+                        <ul>
+                            <li><strong>2018:</strong> Company founded.</li>
+                            <li><strong>2019:</strong> First major project completed.</li>
+                            <li><strong>2020:</strong> Expansion into new markets.</li>
+                            <li><strong>2024:</strong> Launch of innovative product/service.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <h3>Meet Our Team</h3>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="team-member">
+                            <h3>Guatam Singh</h3>
+                            <p><strong>CEO & Founder</strong></p>
+                            <p>John has over 20 years of experience in the industry and is the visionary behind DRY
+                                Enterprises.</p>
+                        </div>
+                        <div class="team-member">
+                            <h3>Praveen Kumar</h3>
+                            <p><strong>Chief Operating Officer</strong></p>
+                            <p>Jane oversees our operations, ensuring everything runs smoothly and efficiently.</p>
+                        </div>
+                        <div class="team-member">
+                            <h3>Vipin Singh</h3>
+                            <p><strong>Head of Development</strong></p>
+                            <p>Mike leads our development team, driving innovation and excellence in our products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <h3>What Sets Us Apart</h3>
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>DRY Enterprises stands out due to our commitment to quality, customer satisfaction, and
+                            innovation. We leverage cutting-edge technology and industry expertise to deliver solutions
+                            that make a real difference.</p>
+                        <ul>
+                            <li><strong>Expertise:</strong> Our team consists of highly skilled professionals with
+                                extensive industry experience.</li>
+                            <li><strong>Customer-Centric:</strong> We prioritize our clients' needs and work closely
+                                with them to achieve their goals.</li>
+                            <li><strong>Innovative Solutions:</strong> We continuously develop and implement innovative
+                                solutions to stay ahead of the curve.</li>
+                            <li><strong>Proven Track Record:</strong> Our portfolio of successful projects and satisfied
+                                clients speaks for itself.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <h3> Client Testimonials</h3>
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="testimonial">
+                            <p>"DRY Enterprises delivered exceptional results on our project. Their professionalism and
+                                expertise are unmatched."</p>
+                            <p><strong>- Piyush Randeep, P&D Enterprises</strong></p>
+                        </div>
+                        <div class="testimonial">
+                            <p>"Working with DRY Enterprises was a fantastic experience. Their team is knowledgeable,
+                                responsive, and truly cares about their clients."</p>
+                            <p><strong>- Tannu Shree, Shree Innovations</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <h3>Careers</h3>
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Join our team of talented professionals and be a part of an innovative and dynamic company.
+                            Check out our current job openings:</p>
+                        <ul>
+                            <li><a href="/job">Python Developer</a></li>
+                            <li><a href="/job">UI/UX Designer</a></li>
+                            <li><a href="/job">Marketing Head</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

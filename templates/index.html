@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('/static/4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        td{
+            padding: 20px;
+        }
+        form{
+            margin-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info1">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><h2>Employee Details</h2></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/all">View All Employee</a></li>
+                                <li><a class="dropdown-item" href="/remove">Remove An Employee</a></li>
+                                <li><a class="dropdown-item" href="/filter">Filter Employee Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container form-box mx-8">
+        <h1 class="text-center">Fill Your Details Here </h1>
+        <form method="post" action="/">
+            {% csrf_token %}
+            <div class="center-table my-5">
+                <table border="1" height="110%">
+                    <tr>
+                        <td>First name:</td>
+                        <td><input type="text" class="form-control" id="first_name" name="first_name" required></td>
+
+                        <td class="mx">Last name:</td>
+                        <td><input type="text" class="form-control" id="last_name" name="last_name" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Email address:</td>
+                        <td><input type="email" class="form-control" id="email" name="email" required></td>
+
+                        <td class="mx">Mobile No:</td>
+                        <td><input type="text" class="form-control" id="phone" name="phone" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Employee Id:</td>
+                        <td><input type="text" class="form-control" id="id_no" name="id_no" required></td>
+
+                        <td class="mx">Department name:</td>
+                        <td><input type="text" class="form-control" id="dept" name="dept" required></td>
+                    </tr>
+
+                    <tr>
+                        <td class=>Salary:</td>
+                        <td><input type="text" class="form-control" id="salary" name="salary" required></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class=" form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
+            </div>
+            <button type="save" class="btn btn-primary my-3">Save</button>
+            <button type="reset" class="btn btn-secondary my-3 mx-2">Clear</button>
+
+        </form>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<!-- {% comment %} <div class="mb-3">
+    <label for="first_name" class="first_name">First name</label>
+    <input type="text" class="form-control" id="first_name" name="first_name" required>
+</div>
+<div class="mb-3">
+    <label for="last_name" class="last_name">Last name</label>
+    <input type="text" class="form-control" id="last_name" name="last_name" required>
+</div>
+<div class="mb-3">
+    <label for="email" class="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+</div>
+<div class="mb-3">
+    <label for="phone" class="phone">Mobile no.</label>
+    <input type="text" class="form-control" id="phone" name="phone" required>
+</div>
+<div class="mb-3">
+    <label for="id_no" class="id_no"> Employee Id</label>
+    <input type="text" class="form-control" id="id_no" name="id_no" required>
+</div>
+<div class="mb-3">
+    <label for="dept" class="dept">Department Name</label>
+    <input type="text" class="form-control" id="dept" name="dept" required>
+</div>
+<div class="mb-3">
+    <label for="salary" class="salary">Salary</label>
+    <input type="text" class="form-control" id="salary" name="salary" required>
+</div>
+<div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
+</div>
+<button type="save" class="btn btn-primary my-3">Save</button>
+<button type="reset" class="btn btn-secondary my-3">Clear</button>
+<hr> {% endcomment %} -->
